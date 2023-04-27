@@ -56,7 +56,7 @@
 						                   		<i class="ion-ios-remove"></i>
 						                	</button>
 											<input type="number" name="quantity" id="quantity"
-												class="quantity form-control input-number" value="1" min="1" max="100">
+												class="quantity form-control input-number ml-2 mr-2" value="1" min="1" max="100">
 											<button type="button" class="quantity-right-plus" data-type="plus" data-field="">
 						                    	<i class="ion-ios-add"></i>
 						                 	</button>
