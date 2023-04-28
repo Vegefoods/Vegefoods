@@ -125,7 +125,7 @@
 									<h2>Vegetables</h2>
 									<p>Protect the health of every home</p>
 									<p>
-										<a href="#" class="btn btn-primary">Shop now</a>
+										<a href="shop" class="btn btn-primary">Shop now</a>
 									</p>
 								</div>
 							</div>
@@ -460,6 +460,9 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="d-flex justify-content-center">
+			<a href="shop" class="btn btn-primary">See more</a>
 		</div>
 	</section>
 

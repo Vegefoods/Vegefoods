@@ -33,7 +33,8 @@
 									alt="">
 							</a>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<a class="dropdown-item" href="#">Profile</a>
+								<!-- <a class="dropdown-item" href="#">Profile</a> -->
+								<a class="dropdown-item" href="add-product.jsp">Add Product</a>
 								<a class="dropdown-item" href="signup.jsp">Logout</a>
 							</div>
 						</div>
