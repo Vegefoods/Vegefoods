@@ -242,3 +242,26 @@ footer a {
 	color: green;
 	text-decoration: none;
 }
+.alert {
+	position: relative;
+	padding: 0.75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+}
+.alert-danger {
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+}
+.text-center {
+	text-align: center !important;
+}
+.form-check-input {
+	position: absolute;
+	margin-top: 0.3rem;
+	margin-left: -1.25rem;
+}
+.form-check-input:disabled ~ .form-check-label {
+	color: #6c757d;
+}

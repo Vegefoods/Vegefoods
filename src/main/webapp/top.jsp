@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 	<div class="py-1 bg-primary">
 		<div class="container">
@@ -22,10 +23,16 @@
 						  		</div>
 							</form>
 						</div>
-						
-						<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-							<span class="text"><a href="signup.jsp" class="text-white">Login &amp Singup</a></span>
-						</div>
+						<c:if test="${sessionScope.user == null}">
+							<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+								<span class="text"><a href="login" class="text-white">Login &amp Singup</a></span>
+							</div>
+						</c:if>
+						<c:if test="${sessionScope.user != null}">
+							<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+								<span class="text"><a href="#" class="text-white">Hello, ${sessionScope.user.email}</a></span>
+							</div>
+						</c:if>
 					</div>
 				</div>
 			</div>

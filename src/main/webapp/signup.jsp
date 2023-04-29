@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
 
@@ -13,10 +14,13 @@
 <body>
 	<div class="container" id="container">
 		<div class="form-container sign-up-container">
-			<form action="" method="post">
+			<form action="register" method="post">
 				<h1>Sign Up</h1>
-				<input type="text" placeholder="Username" name="fullName" required />
-				<input type="text" placeholder="Address" name="address" required />
+				<c:if test="${error != null}">
+					<span style="color: red; text-align: center; font-size: 14px">${error }</span>
+				</c:if>
+				<!-- <input type="text" placeholder="Username" name="fullName" required /> -->
+				<!-- <input type="text" placeholder="Address" name="address" required /> -->
 				<input type="number" placeholder="Phone number" name="phoneNumber" required />
 				<input type="text" placeholder="Example@gmail.com" name="email" required />
 				<input type="password" placeholder="Password" name="password" required />
@@ -25,17 +29,26 @@
 				<button type="submit">Sign Up</button>
 			</form>
 		</div>
+		
 		<div class="form-container sign-up-container-firstpage">
-			<form action="" method="post">
+			<form action="login" method="post">
 				<h3 style="color: red; font-weight: bold"></h3>
 				<h3 style="color: red; font-weight: bold"></h3>
 				<h3 style="color: blue; font-weight: bold"></h3>
 				<h1>Login</h1>
-				<span>Sign in with username and password</span>
-				<input type="text" placeholder="Username" name="name" required />
-				<input type="password" placeholder="Password" name="pass" required />
+				<span>Sign in with phone number and password</span>
+				<c:if test="${message != null}">
+					<span style="color: red; font-size: 14px;">${message }</span>
+				</c:if>
+				<input type="number" placeholder="Phone number" name="name" value="${phoneNumber}" required />
+				<input type="password" placeholder="Password" name="pass" value="${password }" required />
 				<div>
 					<span style="color: Red; font-weight: bold"></span>
+				</div>
+				<div class="flex-row-reverse">
+					<input name="remember" value="1" type="checkbox"
+						class="form-check-input" id="exampleCheck1"> 
+					<label class="form-check-label" for="exampleCheck1">Remember me</label>
 				</div>
 				<button type="submit">Login</button>
 			</form>
@@ -43,7 +56,7 @@
 		<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-panel overlay-left">
-					<h2>Welcome to VEGEFOODS</h2>
+					<h2>Welcome to Vegefoods</h2>
 
 					<button class="ghost" id="signIn">Login</button>
 				</div>
